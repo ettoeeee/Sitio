@@ -568,18 +568,33 @@ Se espera que esta ampliación tenga un impacto significativo en la Unidad de Vi
   </div>
 </div>
 
-<!-- Ícono de robot en la esquina superior derecha -->
-<a href="https://raulalvarez12.github.io/FrontProyectoSE/" target="_blank">
-  <i class="fas fa-robot" style="position: fixed; bottom: 20px; right: 20px; font-size: 50px; z-index: 1000; color: #00aaff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 50%; background-color: #ffffff; transition: transform 0.3s ease;">
-  </i>
-</a>
+<!-- Ícono de robot en la esquina inferior derecha -->
+<div id="chatbot-container">
+    <a href="javascript:void(0)" id="chatbot-button">
+        <i class="fas fa-robot" style="position: fixed; bottom: 20px; right: 20px; font-size: 50px; z-index: 1000; color: #00aaff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); padding: 10px; border-radius: 50%; background-color: #ffffff; transition: transform 0.3s ease;">
+        </i>
+    </a>
+    <!-- Iframe para el chatbot -->
+    <iframe id="chatbot-frame" src="https://raulalvarez12.github.io/FrontProyectoSE/" style="display: none; width: 350px; height: 500px; border: none; position: fixed; bottom: 80px; right: 20px; background: white; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);"></iframe>
+</div>
 
-<!-- Si quieres que haga un pequeño efecto de rebote cuando el usuario pase el ratón por encima -->
+<!-- Efecto de rebote cuando el usuario pasa el ratón por encima -->
 <style>
-  a:hover i {
+  #chatbot-button:hover i {
       transform: scale(1.1);
   }
 </style>
+
+<!-- Script para mostrar/ocultar el chatbot -->
+<script>
+    // Añadir el evento de clic para mostrar/ocultar el iframe del chatbot
+    document.getElementById('chatbot-button').addEventListener('click', function() {
+        var chatbotFrame = document.getElementById('chatbot-frame');
+        // Alternar entre mostrar y ocultar el iframe
+        chatbotFrame.style.display = chatbotFrame.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
 
     </div>
   
